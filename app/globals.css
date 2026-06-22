@@ -14,6 +14,11 @@ body{
 a{color:inherit;text-decoration:none}
 .serif{font-family:var(--font-serif),Georgia,serif}
 
+/* overflow safety net: form controls and grid children must be allowed to
+   shrink below their intrinsic content width (prevents mobile h-scroll) */
+input,select,textarea{min-width:0;max-width:100%}
+.contact-grid > *{min-width:0}
+
 /* hover / focus interactions ported from the design prototype */
 .navlink{transition:color .2s}
 .navlink:hover{color:#1f3a2e}
@@ -86,6 +91,11 @@ a{color:inherit;text-decoration:none}
   .img-band p{font-size:21px !important}
   /* contact info panel padding shrinks on phones */
   .contact-grid > div:first-child{padding:30px 24px !important}
+  .form-card{padding:24px !important}
+}
+/* stack name + company on small phones so two inputs never force overflow */
+@media (max-width:480px){
+  .name-row{grid-template-columns:1fr !important}
 }
 @media (prefers-reduced-motion:reduce){
   html{scroll-behavior:auto}

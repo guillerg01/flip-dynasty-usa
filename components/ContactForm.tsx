@@ -12,11 +12,15 @@ const field: React.CSSProperties = {
   borderRadius: 9,
   background: "#fbfaf6",
   color: "#1c211d",
+  width: "100%",
+  minWidth: 0,
+  maxWidth: "100%",
 };
 const labelStyle: React.CSSProperties = {
   display: "flex",
   flexDirection: "column",
   gap: 7,
+  minWidth: 0,
 };
 const labelSpan: React.CSSProperties = { fontSize: 12.5, fontWeight: 600, color: "#3a463f" };
 
@@ -56,7 +60,7 @@ export default function ContactForm() {
 
   if (status === "success") {
     return (
-      <div style={cardStyle}>
+      <div className="form-card" style={cardStyle}>
         <div
           style={{
             padding: "48px 8px",
@@ -114,9 +118,9 @@ export default function ContactForm() {
   const sending = status === "sending";
 
   return (
-    <div style={cardStyle}>
+    <div className="form-card" style={cardStyle}>
       <form onSubmit={handleSubmit}>
-        <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: 16, marginBottom: 16 }}>
+        <div className="name-row" style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: 16, marginBottom: 16 }}>
           <label style={labelStyle}>
             <span style={labelSpan}>{t.fName}</span>
             <input name="name" type="text" required className="fld" style={field} />
@@ -178,4 +182,5 @@ const cardStyle: React.CSSProperties = {
   borderRadius: 18,
   padding: 38,
   boxShadow: "0 24px 50px -36px rgba(22,36,28,0.4)",
+  minWidth: 0,
 };
