@@ -100,6 +100,7 @@ export default function HomePage() {
 
       {/* IMAGE BAND */}
       <section
+        className="img-band"
         style={{
           position: "relative",
           height: 440,

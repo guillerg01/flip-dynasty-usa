@@ -70,6 +70,23 @@ a{color:inherit;text-decoration:none}
 @media (max-width:380px){
   .hdr-sub{display:none !important}
 }
+
+/* responsive: phone polish — tighten the generous desktop spacing & headings */
+@media (max-width:640px){
+  #about,#services,#categories,#process,#contact{
+    padding-top:62px !important;
+    padding-bottom:62px !important;
+  }
+  #about h2,#services h2,#categories h2,#process h2,#contact h2{
+    font-size:clamp(25px,7vw,32px) !important;
+  }
+  #home > div:first-of-type{padding-top:52px !important}
+  #home h1{margin-bottom:20px !important}
+  .img-band{height:300px !important}
+  .img-band p{font-size:21px !important}
+  /* contact info panel padding shrinks on phones */
+  .contact-grid > div:first-child{padding:30px 24px !important}
+}
 @media (prefers-reduced-motion:reduce){
   html{scroll-behavior:auto}
   *{transition:none !important}
