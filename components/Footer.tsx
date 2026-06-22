@@ -13,7 +13,7 @@ export default function Footer({ base = "" }: { base?: string }) {
 
   return (
     <footer style={{ background: "#16241c", padding: "64px 0 32px" }}>
-      <div style={{ maxWidth: 1200, margin: "0 auto", padding: "0 36px" }}>
+      <div style={{ maxWidth: 1200, margin: "0 auto", padding: "0 clamp(20px,5vw,36px)" }}>
         <div
           className="footer-grid"
           style={{

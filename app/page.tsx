@@ -28,7 +28,7 @@ export default function HomePage() {
 
       {/* HERO */}
       <section id="home" style={{ background: "#f5f3ec" }}>
-        <div style={{ maxWidth: 1200, margin: "0 auto", padding: "84px 36px 0" }}>
+        <div style={{ maxWidth: 1200, margin: "0 auto", padding: "84px clamp(20px,5vw,36px) 0" }}>
           <div
             style={{
               display: "inline-flex",
@@ -78,7 +78,7 @@ export default function HomePage() {
         </div>
         {/* trust strip */}
         <div style={{ borderTop: "1px solid #e1dccf", borderBottom: "1px solid #e1dccf", background: "#efece3" }}>
-          <div className="grid-3" style={{ maxWidth: 1200, margin: "0 auto", padding: "0 36px", display: "grid", gridTemplateColumns: "repeat(3,1fr)" }}>
+          <div className="grid-3" style={{ maxWidth: 1200, margin: "0 auto", padding: "0 clamp(20px,5vw,36px)", display: "grid", gridTemplateColumns: "repeat(3,1fr)" }}>
             {[t.hero.b1, t.hero.b2, t.hero.b3].map((b, i) => (
               <div
                 key={i}
@@ -107,7 +107,7 @@ export default function HomePage() {
         }}
       >
         <div style={{ position: "absolute", inset: 0, background: "linear-gradient(90deg,rgba(15,26,20,0.82) 0%,rgba(15,26,20,0.35) 55%,rgba(15,26,20,0.15) 100%)" }} />
-        <div style={{ position: "relative", maxWidth: 1200, margin: "0 auto", padding: "0 36px", height: "100%", display: "flex", alignItems: "center" }}>
+        <div style={{ position: "relative", maxWidth: 1200, margin: "0 auto", padding: "0 clamp(20px,5vw,36px)", height: "100%", display: "flex", alignItems: "center" }}>
           <div style={{ maxWidth: 540 }}>
             <div style={{ fontSize: 12, fontWeight: 700, letterSpacing: 2.2, textTransform: "uppercase", color: "#8fc4a7", marginBottom: 16 }}>{t.band.eyebrow}</div>
             <p className="serif h2-band" style={{ fontWeight: 500, fontSize: 28, lineHeight: 1.32, color: "#f4f2ea", textWrap: "pretty" }}>{t.band.caption}</p>
@@ -117,13 +117,13 @@ export default function HomePage() {
 
       {/* ABOUT */}
       <section id="about" style={{ padding: "100px 0", background: "#f5f3ec" }}>
-        <div style={{ maxWidth: 1000, margin: "0 auto", padding: "0 36px", textAlign: "center" }}>
+        <div style={{ maxWidth: 1000, margin: "0 auto", padding: "0 clamp(20px,5vw,36px)", textAlign: "center" }}>
           <div style={eyebrow("#3f7d5c")}>{t.about.eyebrow}</div>
           <h2 className="serif" style={{ fontWeight: 600, fontSize: 40, lineHeight: 1.16, letterSpacing: -0.4, color: "#16241c", marginBottom: 26, textWrap: "balance" }}>{t.about.title}</h2>
           <p style={{ fontSize: 17.5, color: "#4b574f", maxWidth: 780, margin: "0 auto 18px", textWrap: "pretty" }}>{t.about.p1}</p>
           <p style={{ fontSize: 17.5, color: "#4b574f", maxWidth: 780, margin: "0 auto", textWrap: "pretty" }}>{t.about.p2}</p>
         </div>
-        <div className="grid-4" style={{ maxWidth: 1200, margin: "54px auto 0", padding: "0 36px", display: "grid", gridTemplateColumns: "repeat(4,1fr)", gap: 28 }}>
+        <div className="grid-4" style={{ maxWidth: 1200, margin: "54px auto 0", padding: "0 clamp(20px,5vw,36px)", display: "grid", gridTemplateColumns: "repeat(4,1fr)", gap: 28 }}>
           {t.about.facts.map((f) => (
             <div key={f.k} style={{ borderTop: "2px solid #1f3a2e", paddingTop: 18 }}>
               <div className="serif" style={{ fontSize: 15, fontWeight: 600, color: "#3f7d5c", marginBottom: 10 }}>{f.k}</div>
@@ -135,7 +135,7 @@ export default function HomePage() {
 
       {/* SERVICES */}
       <section id="services" style={{ padding: "96px 0", background: "#16241c" }}>
-        <div style={{ maxWidth: 1200, margin: "0 auto", padding: "0 36px" }}>
+        <div style={{ maxWidth: 1200, margin: "0 auto", padding: "0 clamp(20px,5vw,36px)" }}>
           <div style={{ display: "flex", justifyContent: "space-between", alignItems: "flex-end", gap: 30, marginBottom: 48, flexWrap: "wrap" }}>
             <div style={{ maxWidth: 620 }}>
               <div style={eyebrow("#7fb89a")}>{t.services.eyebrow}</div>
@@ -156,7 +156,7 @@ export default function HomePage() {
 
       {/* CATEGORIES */}
       <section id="categories" style={{ padding: "100px 0", background: "#f5f3ec" }}>
-        <div style={{ maxWidth: 1200, margin: "0 auto", padding: "0 36px" }}>
+        <div style={{ maxWidth: 1200, margin: "0 auto", padding: "0 clamp(20px,5vw,36px)" }}>
           <div style={{ maxWidth: 740, marginBottom: 50 }}>
             <div style={eyebrow("#3f7d5c")}>{t.categories.eyebrow}</div>
             <h2 className="serif" style={{ fontWeight: 600, fontSize: 38, lineHeight: 1.15, letterSpacing: -0.3, color: "#16241c", marginBottom: 18, textWrap: "balance" }}>{t.categories.title}</h2>
@@ -191,13 +191,13 @@ export default function HomePage() {
 
       {/* PROCESS */}
       <section id="process" style={{ padding: "100px 0", background: "#efece3", borderTop: "1px solid #e1dccf", borderBottom: "1px solid #e1dccf" }}>
-        <div style={{ maxWidth: 1200, margin: "0 auto", padding: "0 36px" }}>
+        <div style={{ maxWidth: 1200, margin: "0 auto", padding: "0 clamp(20px,5vw,36px)" }}>
           <div style={{ maxWidth: 700, marginBottom: 60 }}>
             <div style={eyebrow("#3f7d5c")}>{t.process.eyebrow}</div>
             <h2 className="serif" style={{ fontWeight: 600, fontSize: 38, lineHeight: 1.15, letterSpacing: -0.3, color: "#16241c", textWrap: "balance" }}>{t.process.title}</h2>
           </div>
           <div className="grid-process" style={{ position: "relative", display: "grid", gridTemplateColumns: "repeat(4,1fr)", gap: 30 }}>
-            <div style={{ position: "absolute", top: 23, left: "6%", right: "6%", height: 2, background: "#d4cfc1" }} />
+            <div className="proc-line" style={{ position: "absolute", top: 23, left: "6%", right: "6%", height: 2, background: "#d4cfc1" }} />
             {t.process.items.map((p) => (
               <div key={p.n} style={{ position: "relative" }}>
                 <div className="serif" style={{ width: 48, height: 48, borderRadius: "50%", background: "#1f3a2e", color: "#fff", display: "flex", alignItems: "center", justifyContent: "center", fontSize: 18, fontWeight: 600, marginBottom: 24, position: "relative", zIndex: 1, boxShadow: "0 0 0 6px #efece3" }}>{p.n}</div>
@@ -211,7 +211,7 @@ export default function HomePage() {
 
       {/* STATS */}
       <section style={{ padding: "66px 0", background: "#1f3a2e" }}>
-        <div className="grid-stats" style={{ maxWidth: 1200, margin: "0 auto", padding: "0 36px", display: "grid", gridTemplateColumns: "repeat(4,1fr)", gap: 24 }}>
+        <div className="grid-stats" style={{ maxWidth: 1200, margin: "0 auto", padding: "0 clamp(20px,5vw,36px)", display: "grid", gridTemplateColumns: "repeat(4,1fr)", gap: 24 }}>
           {t.stats.map((st, i) => (
             <div key={i} style={{ textAlign: "center", padding: "0 14px" }}>
               <div className="serif" style={{ fontSize: 34, fontWeight: 600, color: "#fff", lineHeight: 1.05, marginBottom: 8 }}>{st.v}</div>
@@ -223,7 +223,7 @@ export default function HomePage() {
 
       {/* CONTACT */}
       <section id="contact" style={{ padding: "100px 0", background: "#f5f3ec" }}>
-        <div className="contact-grid" style={{ maxWidth: 1200, margin: "0 auto", padding: "0 36px", display: "grid", gridTemplateColumns: "0.85fr 1.15fr", gap: 32, alignItems: "stretch" }}>
+        <div className="contact-grid" style={{ maxWidth: 1200, margin: "0 auto", padding: "0 clamp(20px,5vw,36px)", display: "grid", gridTemplateColumns: "0.85fr 1.15fr", gap: 32, alignItems: "stretch" }}>
           {/* info panel */}
           <div style={{ background: "#16241c", borderRadius: 18, padding: "42px 38px", color: "#f4f2ea" }}>
             <div style={{ fontSize: 12, fontWeight: 700, letterSpacing: 2, textTransform: "uppercase", color: "#7fb89a", marginBottom: 18 }}>{t.contact.eyebrow}</div>

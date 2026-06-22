@@ -17,9 +17,17 @@ export async function generateMetadata({
   const { slug } = await params;
   if (!isCategory(slug)) return {};
   const c = CATS[slug].en;
+  const url = `/category/${slug}`;
   return {
-    title: `${c.name} | Flip Dynasty Holdings LLC`,
+    title: c.name,
     description: c.tagline,
+    alternates: { canonical: url },
+    openGraph: {
+      type: "article",
+      url,
+      title: `${c.name} | Flip Dynasty Holdings LLC`,
+      description: c.tagline,
+    },
   };
 }
 

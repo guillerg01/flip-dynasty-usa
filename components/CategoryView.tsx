@@ -27,7 +27,7 @@ export default function CategoryView({ slug }: { slug: CategorySlug }) {
         {/* eslint-disable-next-line @next/next/no-img-element */}
         <img src={entry.heroImg} alt={cat.name} style={{ position: "absolute", inset: 0, width: "100%", height: "100%", objectFit: "cover" }} />
         <div style={{ position: "absolute", inset: 0, background: "linear-gradient(90deg,rgba(15,26,20,0.88) 0%,rgba(15,26,20,0.55) 60%,rgba(15,26,20,0.3) 100%)" }} />
-        <div style={{ position: "relative", maxWidth: 1200, margin: "0 auto", padding: "0 36px", height: "100%", display: "flex", flexDirection: "column", justifyContent: "center" }}>
+        <div style={{ position: "relative", maxWidth: 1200, margin: "0 auto", padding: "0 clamp(20px,5vw,36px)", height: "100%", display: "flex", flexDirection: "column", justifyContent: "center" }}>
           <div style={{ display: "flex", alignItems: "center", gap: 9, fontSize: 13, color: "#9fc4ae", marginBottom: 20, fontWeight: 500 }}>
             <Link href="/" className="crumb" style={{ color: "#9fc4ae" }}>{t.crumbHome}</Link>
             <span style={{ opacity: 0.5 }}>/</span>
@@ -43,7 +43,7 @@ export default function CategoryView({ slug }: { slug: CategorySlug }) {
 
       {/* OVERVIEW */}
       <section style={{ padding: "84px 0 56px", background: "#f5f3ec" }}>
-        <div className="cat-over-grid" style={{ maxWidth: 1200, margin: "0 auto", padding: "0 36px", display: "grid", gridTemplateColumns: "1.4fr 1fr", gap: 56, alignItems: "start" }}>
+        <div className="cat-over-grid" style={{ maxWidth: 1200, margin: "0 auto", padding: "0 clamp(20px,5vw,36px)", display: "grid", gridTemplateColumns: "1.4fr 1fr", gap: 56, alignItems: "start" }}>
           <div>
             <div style={{ fontSize: 12, fontWeight: 700, letterSpacing: 2, textTransform: "uppercase", color: "#3f7d5c", marginBottom: 16 }}>{t.overviewEyebrow}</div>
             <h2 className="serif" style={{ fontWeight: 600, fontSize: 32, lineHeight: 1.18, color: "#16241c", marginBottom: 20, textWrap: "balance" }}>{cat.overTitle}</h2>
@@ -66,7 +66,7 @@ export default function CategoryView({ slug }: { slug: CategorySlug }) {
 
       {/* PRODUCT GROUPS */}
       <section style={{ padding: "40px 0 92px", background: "#f5f3ec" }}>
-        <div style={{ maxWidth: 1200, margin: "0 auto", padding: "0 36px" }}>
+        <div style={{ maxWidth: 1200, margin: "0 auto", padding: "0 clamp(20px,5vw,36px)" }}>
           <div style={{ marginBottom: 34 }}>
             <div style={{ fontSize: 12, fontWeight: 700, letterSpacing: 2, textTransform: "uppercase", color: "#3f7d5c", marginBottom: 14 }}>{t.groupsEyebrow}</div>
             <h2 className="serif" style={{ fontWeight: 600, fontSize: 30, lineHeight: 1.18, color: "#16241c" }}>{t.groupsTitle}</h2>
@@ -85,7 +85,7 @@ export default function CategoryView({ slug }: { slug: CategorySlug }) {
 
       {/* OTHER CATEGORIES */}
       <section style={{ padding: "64px 0", background: "#efece3", borderTop: "1px solid #e1dccf", borderBottom: "1px solid #e1dccf" }}>
-        <div style={{ maxWidth: 1200, margin: "0 auto", padding: "0 36px" }}>
+        <div style={{ maxWidth: 1200, margin: "0 auto", padding: "0 clamp(20px,5vw,36px)" }}>
           <div style={{ fontSize: 12, fontWeight: 700, letterSpacing: 2, textTransform: "uppercase", color: "#3f7d5c", marginBottom: 22 }}>{t.otherTitle}</div>
           <div style={{ display: "flex", flexWrap: "wrap", gap: 12 }}>
             {others.map((o) => (
@@ -99,7 +99,7 @@ export default function CategoryView({ slug }: { slug: CategorySlug }) {
 
       {/* CTA */}
       <section style={{ padding: "90px 0", background: "#16241c" }}>
-        <div style={{ maxWidth: 840, margin: "0 auto", padding: "0 36px", textAlign: "center" }}>
+        <div style={{ maxWidth: 840, margin: "0 auto", padding: "0 clamp(20px,5vw,36px)", textAlign: "center" }}>
           <h2 className="serif" style={{ fontWeight: 600, fontSize: 36, lineHeight: 1.15, color: "#fff", marginBottom: 18, textWrap: "balance" }}>{t.ctaTitle}</h2>
           <p style={{ fontSize: 17, color: "#b3c2b8", maxWidth: 560, margin: "0 auto 30px", lineHeight: 1.6, textWrap: "pretty" }}>{t.ctaSub}</p>
           <Link href="/#contact" className="cta-white" style={{ background: "#fff", color: "#16241c", fontSize: 15, fontWeight: 600, padding: "15px 30px", borderRadius: 10, display: "inline-block" }}>{tf.requestInfo}</Link>
@@ -108,7 +108,7 @@ export default function CategoryView({ slug }: { slug: CategorySlug }) {
 
       {/* FOOTER (compact, matches design's category footer) */}
       <footer style={{ background: "#10190f", padding: "40px 0" }}>
-        <div style={{ maxWidth: 1200, margin: "0 auto", padding: "0 36px", display: "flex", justifyContent: "space-between", alignItems: "center", flexWrap: "wrap", gap: 14 }}>
+        <div style={{ maxWidth: 1200, margin: "0 auto", padding: "0 clamp(20px,5vw,36px)", display: "flex", justifyContent: "space-between", alignItems: "center", flexWrap: "wrap", gap: 14 }}>
           <div style={{ display: "flex", alignItems: "center", gap: 11 }}>
             <span className="serif" style={{ width: 34, height: 34, borderRadius: 8, background: "#284536", display: "flex", alignItems: "center", justifyContent: "center", fontWeight: 600, color: "#fff", fontSize: 15 }}>FD</span>
             <span style={{ fontSize: 14, color: "#9fb3a6" }}>&copy; {year} Flip Dynasty Holdings LLC</span>

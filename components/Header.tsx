@@ -53,7 +53,7 @@ export default function Header({ base = "" }: { base?: string }) {
         style={{
           maxWidth: 1200,
           margin: "0 auto",
-          padding: "0 36px",
+          padding: "0 clamp(20px,5vw,36px)",
           height: 76,
           display: "flex",
           alignItems: "center",
@@ -91,6 +91,7 @@ export default function Header({ base = "" }: { base?: string }) {
               Flip Dynasty Holdings
             </span>
             <span
+              className="hdr-sub"
               style={{
                 fontSize: 10,
                 letterSpacing: 2.6,
@@ -127,7 +128,7 @@ export default function Header({ base = "" }: { base?: string }) {
           </div>
           <a
             href={a("#contact")}
-            className="btn-dark"
+            className="btn-dark hdr-cta"
             style={{
               background: "#1f3a2e",
               color: "#fff",
