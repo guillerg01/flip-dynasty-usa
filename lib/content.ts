@@ -112,8 +112,15 @@ export const HOME = {
       intro:
         "Flip Dynasty Holdings LLC welcomes inquiries from small businesses, operators, offices, service providers, specialty retailers, suppliers, distributors, and commercial accounts looking for practical product support.",
       fName: "Name",
-      fCompany: "Company",
+      fBusinessName: "Business Name",
       fEmail: "Email",
+      fEin: "EIN / Tax ID Number",
+      fBizType: "Type of Business",
+      fBizTypePlaceholder: "Select one",
+      bizTypes: ["Brick & Mortar", "Online Retailer", "Corporate Supply"],
+      fSpend: "Estimated Monthly Spend",
+      fSpendPlaceholder: "Select a range",
+      spendRanges: ["Under $1,000", "$1,000 – $5,000", "$5,000 – $25,000", "$25,000+"],
       fType: "Inquiry Type",
       fTypePlaceholder: "Select one",
       fMessage: "Message",
@@ -267,8 +274,15 @@ export const HOME = {
       intro:
         "Flip Dynasty Holdings LLC da la bienvenida a consultas de pequeños negocios, operadores, oficinas, proveedores de servicios, minoristas especializados, suplidores, distribuidores y cuentas comerciales que buscan apoyo práctico de productos.",
       fName: "Nombre",
-      fCompany: "Empresa",
+      fBusinessName: "Nombre del Negocio",
       fEmail: "Correo electrónico",
+      fEin: "Número EIN / ID Fiscal",
+      fBizType: "Tipo de Negocio",
+      fBizTypePlaceholder: "Seleccione uno",
+      bizTypes: ["Tienda Física", "Minorista en Línea", "Suministro Corporativo"],
+      fSpend: "Presupuesto Mensual Estimado",
+      fSpendPlaceholder: "Seleccione un rango",
+      spendRanges: ["Menos de $1,000", "$1,000 – $5,000", "$5,000 – $25,000", "Más de $25,000"],
       fType: "Tipo de Consulta",
       fTypePlaceholder: "Seleccione una",
       fMessage: "Mensaje",
@@ -314,6 +328,11 @@ export const HOME = {
 export const PHONE = "+1 (641) 799-3953";
 export const PHONE_HREF = "tel:+16417993953";
 export const EMAIL = "info@flipdynastyusa.com";
+export const ADDRESS = {
+  name: "Flip Dynasty Holdings LLC",
+  line1: "510 E Main St, Rear Unit",
+  line2: "Ottumwa, IA 52501",
+} as const;
 
 export function home(lang: Lang) {
   return HOME[lang];

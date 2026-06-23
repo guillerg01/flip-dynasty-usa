@@ -5,7 +5,7 @@ import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import ContactForm from "@/components/ContactForm";
 import { useLang } from "@/lib/i18n";
-import { HOME, PHONE, PHONE_HREF, EMAIL } from "@/lib/content";
+import { HOME, PHONE, PHONE_HREF, EMAIL, ADDRESS } from "@/lib/content";
 import { ORDER, categoryCard } from "@/lib/categories";
 
 const eyebrow = (color: string): React.CSSProperties => ({
@@ -234,7 +234,11 @@ export default function HomePage() {
               <InfoRow label={t.contact.phoneLabel}><a href={PHONE_HREF} style={{ fontSize: 17, fontWeight: 600, color: "#fff" }}>{PHONE}</a></InfoRow>
               <InfoRow label={t.contact.emailLabel}><a href={`mailto:${EMAIL}`} style={{ fontSize: 17, fontWeight: 600, color: "#fff" }}>{EMAIL}</a></InfoRow>
               <InfoRow label={t.contact.hoursLabel}><div style={{ fontSize: 16, fontWeight: 600, color: "#fff" }}>{t.contact.hoursVal}</div></InfoRow>
-              <InfoRow label={t.contact.locLabel} last><div style={{ fontSize: 16, fontWeight: 600, color: "#fff" }}>Iowa, USA &middot; {t.contact.bizVal}</div></InfoRow>
+              <InfoRow label={t.contact.locLabel} last>
+                <address style={{ fontStyle: "normal", fontSize: 15.5, fontWeight: 600, color: "#fff", lineHeight: 1.5 }}>
+                  {ADDRESS.line1}<br />{ADDRESS.line2}
+                </address>
+              </InfoRow>
             </div>
           </div>
           <ContactForm />

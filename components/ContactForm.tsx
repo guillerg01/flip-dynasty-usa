@@ -126,14 +126,40 @@ export default function ContactForm() {
             <input name="name" type="text" required className="fld" style={field} />
           </label>
           <label style={labelStyle}>
-            <span style={labelSpan}>{t.fCompany}</span>
-            <input name="company" type="text" className="fld" style={field} />
+            <span style={labelSpan}>{t.fBusinessName}</span>
+            <input name="business_name" type="text" required className="fld" style={field} />
           </label>
         </div>
-        <label style={{ ...labelStyle, marginBottom: 16 }}>
-          <span style={labelSpan}>{t.fEmail}</span>
-          <input name="email" type="email" required className="fld" style={field} />
-        </label>
+        <div className="name-row" style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: 16, marginBottom: 16 }}>
+          <label style={labelStyle}>
+            <span style={labelSpan}>{t.fEmail}</span>
+            <input name="email" type="email" required className="fld" style={field} />
+          </label>
+          <label style={labelStyle}>
+            <span style={labelSpan}>{t.fEin}</span>
+            <input name="ein_tax_id" type="text" required className="fld" style={field} />
+          </label>
+        </div>
+        <div className="name-row" style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: 16, marginBottom: 16 }}>
+          <label style={labelStyle}>
+            <span style={labelSpan}>{t.fBizType}</span>
+            <select name="business_type" required className="fld" style={field} defaultValue="">
+              <option value="" disabled>{t.fBizTypePlaceholder}</option>
+              {t.bizTypes.map((ty) => (
+                <option key={ty} value={ty}>{ty}</option>
+              ))}
+            </select>
+          </label>
+          <label style={labelStyle}>
+            <span style={labelSpan}>{t.fSpend}</span>
+            <select name="monthly_spend" required className="fld" style={field} defaultValue="">
+              <option value="" disabled>{t.fSpendPlaceholder}</option>
+              {t.spendRanges.map((r) => (
+                <option key={r} value={r}>{r}</option>
+              ))}
+            </select>
+          </label>
+        </div>
         <label style={{ ...labelStyle, marginBottom: 16 }}>
           <span style={labelSpan}>{t.fType}</span>
           <select name="inquiry_type" required className="fld" style={field} defaultValue="">

@@ -2,7 +2,7 @@
 
 import Link from "next/link";
 import { useLang } from "@/lib/i18n";
-import { HOME, PHONE, PHONE_HREF } from "@/lib/content";
+import { HOME, PHONE, PHONE_HREF, ADDRESS } from "@/lib/content";
 
 export default function Footer({ base = "" }: { base?: string }) {
   const { lang } = useLang();
@@ -47,7 +47,12 @@ export default function Footer({ base = "" }: { base?: string }) {
                 Flip Dynasty Holdings LLC
               </span>
             </div>
-            <p style={{ fontSize: 14.5, color: "#9fb3a6", lineHeight: 1.6 }}>{f.tagline}</p>
+            <p style={{ fontSize: 14.5, color: "#9fb3a6", lineHeight: 1.6, marginBottom: 18 }}>{f.tagline}</p>
+            <address style={{ fontStyle: "normal", fontSize: 13.5, color: "#9fb3a6", lineHeight: 1.6 }}>
+              <span style={{ display: "block", fontWeight: 600, color: "#c2d0c6" }}>{ADDRESS.name}</span>
+              <span style={{ display: "block" }}>{ADDRESS.line1}</span>
+              <span style={{ display: "block" }}>{ADDRESS.line2}</span>
+            </address>
           </div>
 
           <div>
@@ -87,7 +92,7 @@ export default function Footer({ base = "" }: { base?: string }) {
           <span style={{ fontSize: 13, color: "#7d9488" }}>
             &copy; {year} Flip Dynasty Holdings LLC. {f.rights}
           </span>
-          <span style={{ fontSize: 13, color: "#7d9488" }}>Iowa, USA</span>
+          <span style={{ fontSize: 13, color: "#7d9488" }}>{ADDRESS.line1} &middot; {ADDRESS.line2}</span>
         </div>
       </div>
     </footer>

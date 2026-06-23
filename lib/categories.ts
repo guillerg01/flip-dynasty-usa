@@ -188,8 +188,8 @@ export const CATS: Record<CategorySlug, CatEntry> = {
     },
   },
   "beauty-personal-care": {
-    cardImg: U("photo-1556228578-8c89e6adf883", 900),
-    heroImg: U("photo-1556228578-8c89e6adf883", 1600),
+    cardImg: U("photo-1612817288484-6f916006741a", 900),
+    heroImg: U("photo-1612817288484-6f916006741a", 1600),
     en: {
       name: "Beauty & Personal Care",
       cardDesc: "Routine-use personal care, grooming, and self-care categories.",
@@ -288,8 +288,8 @@ export const CATS: Record<CategorySlug, CatEntry> = {
     },
   },
   "pet-supplies": {
-    cardImg: U("photo-1601758228041-f3b2795255f1", 900),
-    heroImg: U("photo-1601758228041-f3b2795255f1", 1600),
+    cardImg: U("photo-1591946614720-90a587da4a36", 900),
+    heroImg: U("photo-1591946614720-90a587da4a36", 1600),
     en: {
       name: "Pet Supplies",
       cardDesc: "Pet food, treats, care items, accessories, and everyday pet products.",
